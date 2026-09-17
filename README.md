@@ -93,3 +93,34 @@ Project_Folder/
 └── PetImages/                          # Downloaded Kaggle dataset
     ├── Cat/
     └── Dog/
+```
+
+## Technologies and Libraries Used
+* **Python 3:** Core programming language.
+* **TensorFlow / Keras:** Deep learning framework used for loading the model and running predictions.
+* **Streamlit:** Framework used for building the interactive web dashboard.
+* **NumPy:** Used for numerical operations and array manipulations.
+* **Pillow (PIL):** Used for opening, converting, and resizing image files.
+* **Matplotlib:** Used in the notebook for data visualization.
+* **Kaggle API:** Used for automated dataset downloading.
+
+## How to Run the Project
+1. Ensure Python is installed on your system.
+2. Install the required dependencies:
+   `pip install streamlit tensorflow numpy pillow`
+3. Place the pre-trained model inside a folder named `model/` in the same directory as the script.
+4. Run the Streamlit application using the command:
+   `streamlit run app.py`
+5. Open the provided Local URL in your web browser to interact with the dashboard.
+
+## Challenges / Limitations
+The primary limitation of this submission is the absence of the complete training pipeline in the provided code. Specifically, the required implementations for the Custom CNN, the Base MobileNetV2, the data augmentation pipeline, and the comparative evaluation graphs were not included. The project currently relies on a pre-trained and pre-evaluated model rather than demonstrating the end-to-end model development lifecycle requested in the assignment.
+
+## Conclusion
+The project successfully delivers a highly accurate, user-friendly Streamlit web application that can classify images of cats and dogs in real-time. By leveraging a Fine-Tuned MobileNetV2 architecture and implementing a clever confidence threshold system, the application handles both valid and invalid image uploads gracefully. 
+
+## Future Improvements
+To fully align with the assignment guidelines and improve the project, the following steps should be taken:
+* Include the complete Jupyter Notebook demonstrating the training, augmentation, and evaluation of all three required models (Custom CNN, Base MobileNetV2, and Fine-Tuned MobileNetV2).
+* Dynamically plot training and validation loss/accuracy curves.
+* Implement Grad-CAM visualization in the Streamlit app to show users exactly which parts of the image the model is looking at to make its decision.
